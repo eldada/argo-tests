@@ -1,4 +1,4 @@
-replicaCount: 2
+replicaCount: 1
 
 service:
   type: LoadBalancer
@@ -6,7 +6,7 @@ service:
 resources:
   limits:
     cpu: 100m
-    memory: 128Mi
+    memory: 100Mi
   requests:
     cpu: 10m
     memory: 50Mi
