@@ -1,0 +1,25 @@
+# See full spec at https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-yaml
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/eldada/argo-tests'
+    path: apps/simple-yaml
+    targetRevision: HEAD
+    directory:
+      recurse: true
+      jsonnet: {}
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argo-simple-example
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

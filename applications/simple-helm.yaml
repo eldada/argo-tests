@@ -1,0 +1,26 @@
+# See full spec at https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-helm
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/eldada/argo-tests'
+    path: apps/simple-helm
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+        - values-override.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argo-helm-example
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
