@@ -6,4 +6,5 @@
 ## Create the applications 
 - Add demo applications to the current git repository
 - [simple-yaml](apps/simple-yaml) - a single pod example
-- [simple-helm](apps/simple-helm) - a single pod example
+- [simple-helm](apps/simple-helm) - a demo helm chart (nginx created by `helm create demo`)
+

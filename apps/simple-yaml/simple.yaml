@@ -12,4 +12,4 @@ spec:
       command:
         - 'bash'
         - '-c'
-        - 'while true; do sleep 5; done'
+        - 'while true; do echo $(date); sleep 5; done'
