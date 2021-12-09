@@ -22,3 +22,5 @@ kubectl apply -f applications/simple-helm.yaml
 - Commit and push the change
 - View application being synced in the UI
 
+## More examples
+See more examples in the [ArgoCD examples repository](https://github.com/argoproj/argocd-example-apps)
