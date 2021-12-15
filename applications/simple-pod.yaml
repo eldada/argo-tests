@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/eldada/argo-tests'
-    path: apps/simple-pod
+    path: demo-apps/simple-pod
     targetRevision: HEAD
     directory:
       recurse: true

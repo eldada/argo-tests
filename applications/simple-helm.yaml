@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/eldada/argo-tests'
-    path: apps/simple-helm
+    path: demo-apps/simple-helm
     targetRevision: HEAD
     helm:
       valueFiles:
